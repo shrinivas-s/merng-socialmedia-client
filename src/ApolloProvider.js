@@ -14,7 +14,7 @@ const httpLink = createHttpLink({
   });
 
 
-const wsLink = new WebSocketLink({uri:"ws://sheltered-citadel-15083.herokuapp.com/graphql",options:{
+const wsLink = new WebSocketLink({uri:"wss://sheltered-citadel-15083.herokuapp.com/graphql",options:{
     connectionParams: {
         token: localStorage.getItem('iam') ? JSON.parse(localStorage.getItem('iam')).token : undefined
       },
